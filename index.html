@@ -299,7 +299,7 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
                 </div>
             </div>
             <div class="absolute bottom-0 right-0 w-1/2 md:w-1/5 lg:w-1/4 animate-on-scroll delay-400">
-                <img src="https://github.com/surajhada/MUSKANCABS/edit/main/Image/Car/banner-pic.JPG" style="border-top-left-radius:100px" alt="Yellow Taxi Car" class="w-full h-auto object-cover hero-car-img">
+                <img src="Image/Car/banner-pic.JPG" style="border-top-left-radius:100px" alt="Yellow Taxi Car" class="w-full h-auto object-cover hero-car-img">
             </div>
         </div>
     </section>
@@ -440,6 +440,8 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
     </section>
 */
 
+
+
     <section id="testimonials" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-yellow-500 text-lg font-semibold mb-4 animate-on-scroll"><i class="fas fa-quote-left mr-2"></i>TESTIMONIALS</p>
@@ -449,7 +451,7 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-200">
-                    <img src="https://github.com/surajhada/MUSKANCABS/edit/main/pic/1.png" alt="Esther Howard" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-yellow-400">
+                    <img src="pic/1.png" alt="Esther Howard" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-yellow-400">
                     <h3 class="text-xl font-bold text-gray-900 mb-1">Vedant Rathi</h3>
                     <p class="text-gray-600 mb-4"> Traveller </p>
                     <p class="text-gray-700 leading-relaxed mb-4">
@@ -596,7 +598,7 @@ I highly recommend it to anyone in need of reliable and top-quality service. Spe
         </div>
     </section>
 --->
-    <section id="booking-form" action="sendmail.php" method="POST" class="py-20 bg-gray-900 relative overflow-hidden">
+    <section id="booking-form" class="py-20 bg-gray-900 relative overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/FFD700?text=Booking+Background'); background-size: cover; background-position: center;"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-12 animate-on-scroll">BOOK FOR A RIDE</h2>
@@ -649,11 +651,10 @@ I highly recommend it to anyone in need of reliable and top-quality service. Spe
                 <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 w-full md:w-auto">
                     BOOK YOUR TRIP
                 </button>
-            </form>
-            
-                  <div id="thanksMsg" style="display:none; color: green; margin-top: 15px;">
+                 <div id="thanksMsg" style="display:none; color: green; margin-top: 15px;">
     ✅ Thank you! Your booking has been received.
   </div>
+            </form>
         </div>
     </section>
 
@@ -783,26 +784,21 @@ I highly recommend it to anyone in need of reliable and top-quality service. Spe
         });
 
         // Form submission handling (simulated email sending)
-     const form = document.getElementById("booking-form");
-    const thankYou = document.getElementById("thanksMsg");
+        const taxiBookingForm = document.getElementById('taxiBookingForm');
+        taxiBookingForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
+            // Get form field values
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const from = document.getElementById('from').value.trim();
+            const to = document.getElementById('to').value.trim();
+            const date = document.getElementById('date').value;
+            const timeHh = document.getElementById('time-hh').value;
+            const timeMm = document.getElementById('time-mm').value;
+            const passenger = document.getElementById('passenger').value;
+            const carClass = document.getElementById('class').value;
 
-      fetch("sendmail.php", {
-        method: "POST",
-        body: formData
-      }).then(res => res.text())
-        .then(data => {
-          if (data.trim() === "success") {
-            form.reset();
-            thankYou.style.display = "block";
-          } else {
-            alert("❌ Failed to send. Try again.");
-          }
-        });
-    });
             // Validation rules
             const alphaRegex = /^[a-zA-Z\s]+$/; // Allows alphabets and spaces
             const numericRegex = /^\d+$/; // Allows only digits

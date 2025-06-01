@@ -1,0 +1,664 @@
+/* CSS/style.css */
+
+/* --- Global Styles & Variables --- */
+:root {
+  /* Light Theme */
+  --bg-color-light: #f4f7f6; /* Light grayish blue */
+  --text-color-light: #333333; /* Dark gray for text */
+  --card-bg-light: #ffffff; /* White for cards */
+  --border-color-light: #e0e0e0; /* Light gray for borders */
+  --primary-color-light: #0077cc; /* Stylish blue */
+  --primary-hover-light: #005fa3; /* Darker blue for hover */
+  --accent-color-light: #ffc107; /* Yellow accent */
+  --header-bg-light: #ffffff; /* White header background */
+  --header-text-light: #333333;
+  --footer-bg-light: #2c3e50; /* Dark slate blue for footer */
+  --footer-text-light: #ecf0f1; /* Light gray for footer text */
+  --menu-link-light: #333333;
+  --menu-link-hover-bg-light: #f0f0f0;
+  --menu-active-border-light: var(--primary-color-light);
+
+  /* Dark Theme (applied when body.dark) */
+  --bg-color-dark: #1e1e1e; /* Very dark gray (almost black) */
+  --text-color-dark: #f0f0f0; /* Light gray for text */
+  --card-bg-dark: #2c2c2c; /* Dark gray for cards */
+  --border-color-dark: #444444; /* Medium gray for borders */
+  --primary-color-dark: #3498db; /* Lighter, vibrant blue */
+  --primary-hover-dark: #2980b9; /* Slightly darker vibrant blue */
+  --accent-color-dark: #f39c12; /* Orange accent */
+  --header-bg-dark: #252525; /* Dark gray for header */
+  --header-text-dark: #f0f0f0;
+  --footer-bg-dark: #1a1a1a; /* Very dark gray for footer */
+  --footer-text-dark: #cccccc; /* Lighter gray for footer text */
+  --menu-link-dark: #f0f0f0;
+  --menu-link-hover-bg-dark: #383838;
+  --menu-active-border-dark: var(--primary-color-dark);
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  font-size: 16px; /* Base font size */
+}
+
+body.dark {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: 600; /* Slightly bolder headings */
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 0.5em; } /* Responsive font size */
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.2em; text-align: center; }
+h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); margin-bottom: 0.7em; }
+
+a {
+  text-decoration: none;
+  color: var(--primary-color-light);
+  transition: color 0.3s ease;
+}
+body.dark a {
+  color: var(--primary-color-dark);
+}
+a:hover {
+  color: var(--primary-hover-light);
+}
+body.dark a:hover {
+  color: var(--primary-hover-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px; /* Subtle rounding for all images */
+}
+
+/* --- Header --- */
+header {
+  background-color: var(--header-bg-light);
+  color: var(--header-text-light);
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+body.dark header {
+  background-color: var(--header-bg-dark);
+  color: var(--header-text-dark);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 700; /* Bolder logo */
+  color: var(--primary-color-light);
+  letter-spacing: -0.5px;
+}
+body.dark .logo {
+  color: var(--primary-color-dark);
+}
+
+nav ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Vertically align menu items with logo/button */
+}
+
+nav ul.menu li {
+  margin-left: 30px; /* Increased spacing */
+}
+
+nav ul.menu li a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--menu-link-light);
+  padding: 0.6rem 0.3rem; /* More padding for easier clicking */
+  position: relative;
+  transition: color 0.3s ease;
+}
+body.dark nav ul.menu li a {
+  color: var(--menu-link-dark);
+}
+
+nav ul.menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px; /* Thicker underline */
+  bottom: -2px; /* Position slightly below text */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--menu-active-border-light);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+body.dark nav ul.menu li a::after {
+  background-color: var(--menu-active-border-dark);
+}
+nav ul.menu li a:hover::after,
+nav ul.menu li a.active::after { /* Add .active class via JS for current page */
+  width: 70%; /* Underline doesn't span full width for a subtle effect */
+}
+nav ul.menu li a:hover {
+    color: var(--primary-color-light);
+}
+body.dark nav ul.menu li a:hover {
+    color: var(--primary-color-dark);
+}
+
+
+.dark-toggle {
+  background: transparent;
+  border: 2px solid var(--header-text-light);
+  color: var(--header-text-light);
+  padding: 0.4rem 0.7rem;
+  border-radius: 20px; /* Pill shape */
+  cursor: pointer;
+  font-size: 1.1rem; /* Slightly smaller icon */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  display: flex; /* For centering icon if needed */
+  align-items: center;
+  justify-content: center;
+}
+body.dark .dark-toggle {
+  border-color: var(--header-text-dark);
+  color: var(--header-text-dark);
+}
+.dark-toggle:hover {
+  background-color: var(--header-text-light);
+  color: var(--header-bg-light);
+  transform: scale(1.1);
+}
+body.dark .dark-toggle:hover {
+  background-color: var(--header-text-dark);
+  color: var(--header-bg-dark);
+}
+
+/* --- Banner --- */
+.banner {
+  background: url('https://placehold.co/1920x1080/556270/FFFFFF?text=Luxury+Rides') no-repeat center center/cover;
+  /* Fallback background color if image fails */
+  background-color: #556270; /* A neutral dark blue */
+  color: #fff;
+  padding: clamp(80px, 15vh, 150px) 0; /* Responsive padding */
+  text-align: center;
+  position: relative;
+  display: flex; /* For vertical centering of content */
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh; /* Ensure banner takes up significant viewport height */
+}
+.banner::before { /* Darkening overlay for better text readability */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)); /* Gradient overlay */
+}
+.banner-content {
+  position: relative; /* To ensure it's above the overlay */
+  z-index: 1;
+  max-width: 800px; /* Limit width of banner text */
+}
+
+.banner h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+.banner p {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  margin-top: 0.5em;
+  color: #f0f0f0; /* Slightly off-white for p */
+}
+
+/* --- Section Base --- */
+section {
+  padding: clamp(40px, 8vh, 80px) 0; /* Responsive padding for sections */
+}
+section:nth-of-type(even) {
+  background-color: var(--card-bg-light);
+}
+body.dark section:nth-of-type(even) {
+  background-color: var(--card-bg-dark);
+}
+
+
+/* --- Car Slider --- */
+.car-slider h2, .reviews h2, .form-section h2 {
+  color: var(--primary-color-light);
+  margin-bottom: clamp(30px, 5vh, 50px); /* Responsive margin */
+}
+body.dark .car-slider h2,
+body.dark .reviews h2,
+body.dark .form-section h2 {
+  color: var(--primary-color-dark);
+}
+
+.slider-container {
+  display: grid; /* Using grid for more robust card layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 25px;
+  padding-bottom: 20px;
+}
+
+.car-card {
+  background-color: var(--card-bg-light);
+  color: var(--text-color-light);
+  border: 1px solid var(--border-color-light);
+  border-radius: 12px; /* More pronounced rounding */
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Ensure info is below image */
+}
+body.dark .car-card {
+  background-color: var(--card-bg-dark);
+  color: var(--text-color-dark);
+  border-color: var(--border-color-dark);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+.car-card:hover {
+  transform: translateY(-8px) scale(1.02); /* More noticeable hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+body.dark .car-card:hover {
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+
+.car-card img {
+  width: 100%;
+  height: 220px; /* Slightly taller images */
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color-light); /* Separator line */
+}
+body.dark .car-card img {
+  border-bottom-color: var(--border-color-dark);
+}
+
+.car-card .info {
+  padding: 20px;
+  flex-grow: 1; /* Allow info to take available space */
+}
+
+.car-card .info h3 {
+  margin-top: 0;
+  color: var(--primary-color-light);
+  font-size: 1.4rem;
+}
+body.dark .car-card .info h3 {
+  color: var(--primary-color-dark);
+}
+.car-card .info p {
+  margin-bottom: 0.6em;
+  font-size: 0.95rem;
+  color: #555;
+}
+body.dark .car-card .info p {
+  color: #bbb;
+}
+
+/* --- Contact Form --- */
+.form-section form {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--card-bg-light);
+  border: 1px solid var(--border-color-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+body.dark .form-section form {
+  background-color: var(--card-bg-dark);
+  border-color: var(--border-color-dark);
+  box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section textarea {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  margin-bottom: 18px; /* Increased margin */
+  border: 1px solid var(--border-color-light);
+  border-radius: 6px; /* Slightly more rounded */
+  font-family: 'Lexend', sans-serif;
+  font-size: 1rem;
+  background-color: var(--bg-color-light); /* Match page background */
+  color: var(--text-color-light);
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+body.dark .form-section input[type="text"],
+body.dark .form-section input[type="email"],
+body.dark .form-section textarea {
+  border-color: var(--border-color-dark);
+  background-color: var(--card-bg-dark); /* Use card bg for inputs in dark mode for contrast */
+  color: var(--text-color-dark);
+}
+
+.form-section input[type="text"]:focus,
+.form-section input[type="email"]:focus,
+.form-section textarea:focus {
+  outline: none;
+  border-color: var(--primary-color-light);
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.15);
+}
+body.dark .form-section input[type="text"]:focus,
+body.dark .form-section input[type="email"]:focus,
+body.dark .form-section textarea:focus {
+  border-color: var(--primary-color-dark);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-section textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-section button[type="submit"] {
+  background-color: var(--primary-color-light);
+  color: #fff;
+  padding: 14px 30px; /* More padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  width: auto;
+  margin: 10px auto 0 auto; /* Adjusted margin */
+}
+body.dark .form-section button[type="submit"] {
+  background-color: var(--primary-color-dark);
+  color: var(--bg-color-dark); /* Dark text for better contrast on light blue button */
+}
+
+.form-section button[type="submit"]:hover {
+  background-color: var(--primary-hover-light);
+  transform: translateY(-2px);
+}
+body.dark .form-section button[type="submit"]:hover {
+  background-color: var(--primary-hover-dark);
+}
+
+/* --- Reviews --- */
+.review-card {
+  background-color: var(--card-bg-light);
+  color: var(--text-color-light);
+  border: 1px solid var(--border-color-light);
+  border-left: 6px solid var(--primary-color-light); /* Thicker accent border */
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 auto 25px auto;
+  max-width: 750px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+body.dark .review-card {
+  background-color: var(--card-bg-dark);
+  color: var(--text-color-dark);
+  border-color: var(--border-color-dark);
+  border-left-color: var(--primary-color-dark);
+  box-shadow: 0 3px 10px rgba(255,255,255,0.04);
+}
+.review-card:hover {
+    transform: scale(1.02);
+}
+
+.review-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.review-card span {
+  font-weight: 600;
+  display: block;
+  text-align: right;
+  color: var(--primary-color-light);
+  font-size: 0.95rem;
+}
+body.dark .review-card span {
+  color: var(--primary-color-dark);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--footer-bg-light);
+  color: var(--footer-text-light);
+  padding: clamp(40px, 8vh, 70px) 0 clamp(20px, 4vh, 30px);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark footer {
+  background-color: var(--footer-bg-dark);
+  color: var(--footer-text-dark);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  color: #ffffff; /* Keep footer headings white/bright for contrast */
+  position: relative;
+  padding-bottom: 8px;
+}
+.footer-section h3::after { /* Underline for footer headings */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color-dark); /* Use a bright color */
+    border-radius: 2px;
+}
+body.dark .footer-section h3 {
+   color: var(--primary-color-dark);
+}
+body.dark .footer-section h3::after {
+    background-color: var(--primary-color-light);
+}
+
+
+.footer-section p,
+.footer-section ul li a {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: var(--footer-text-light);
+  transition: color 0.3s ease;
+}
+body.dark .footer-section p,
+body.dark .footer-section ul li a {
+  color: var(--footer-text-dark);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li a:hover {
+  color: var(--primary-color-dark); /* A lighter color for hover in footer */
+  padding-left: 5px; /* Subtle indent on hover */
+}
+body.dark .footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-section iframe {
+  width: 100%;
+  height: 180px; /* Taller map */
+  border: 0;
+  border-radius: 8px;
+  filter: grayscale(0.3); /* Slightly desaturate map for style */
+}
+body.dark .footer-section iframe {
+    filter: grayscale(0.7) invert(1); /* Invert map for dark mode */
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--footer-text-light);
+}
+body.dark .copyright {
+  border-top-color: rgba(255, 255, 255, 0.1);
+  color: var(--footer-text-dark);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  /* No specific changes here yet, grid handles car cards well */
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-top: 0.5rem; /* Reduce padding to accommodate menu button */
+    padding-bottom: 0.5rem;
+  }
+  header .container {
+    flex-wrap: wrap; /* Allow wrapping for menu button */
+    position: relative; /* For absolute positioning of toggle */
+  }
+  .logo {
+    font-size: 1.7rem;
+  }
+
+  /* Basic Hamburger Menu Logic (requires JS to toggle .nav-active on nav) */
+  .menu-toggle { /* Add a hamburger button in HTML if you want this */
+    display: block; /* Show hamburger */
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--header-text-light);
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute; /* Position it */
+    top: 0.6rem;
+    right: 55px; /* Space for dark mode toggle */
+  }
+  body.dark .menu-toggle {
+    color: var(--header-text-dark);
+  }
+
+  nav {
+    width: 100%;
+    /* max-height: 0; Remove for now, handle with JS .nav-active */
+    /* overflow: hidden; Remove for now */
+    /* transition: max-height 0.4s ease-in-out; Remove for now */
+  }
+  /* nav.nav-active {
+    max-height: 500px; /* Adjust as needed
+  } */
+
+  nav ul.menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start; /* Align items to the left */
+    margin-top: 10px; /* Space below logo/toggles */
+    display: none; /* Hide by default, toggle with JS */
+  }
+  nav.nav-open ul.menu { /* Add class nav-open to nav tag with JS */
+      display: flex;
+  }
+
+  nav ul.menu li {
+    margin-left: 0;
+    width: 100%;
+  }
+  nav ul.menu li a {
+    display: block;
+    padding: 12px 15px; /* More touch-friendly padding */
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background-color 0.2s ease;
+  }
+  nav ul.menu li a:hover {
+    background-color: var(--menu-link-hover-bg-light);
+  }
+  body.dark nav ul.menu li a:hover {
+    background-color: var(--menu-link-hover-bg-dark);
+  }
+  nav ul.menu li a::after { /* Hide underline for stacked mobile links */
+    display: none;
+  }
+
+  .dark-toggle {
+    position: absolute;
+    top: 0.7rem; /* Align with hamburger */
+    right: 15px; /* container padding */
+  }
+
+  .slider-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for smaller screens */
+  }
+  .car-card {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h1 { font-size: 2rem; }
+  .banner p { font-size: 1rem; }
+  h2 { font-size: 1.8rem; }
+
+  .form-section form {
+    padding: 20px;
+  }
+  .footer-container {
+    text-align: center; /* Center footer content on small screens */
+  }
+  .footer-section h3::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+

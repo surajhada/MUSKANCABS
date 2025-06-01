@@ -598,7 +598,7 @@ I highly recommend it to anyone in need of reliable and top-quality service. Spe
         </div>
     </section>
 --->
-    <section id="booking-form" class="py-20 bg-gray-900 relative overflow-hidden">
+    <section id="booking-form" action="sendmail.php" method="POST" class="py-20 bg-gray-900 relative overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/FFD700?text=Booking+Background'); background-size: cover; background-position: center;"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-12 animate-on-scroll">BOOK FOR A RIDE</h2>
@@ -785,7 +785,7 @@ I highly recommend it to anyone in need of reliable and top-quality service. Spe
         });
 
         // Form submission handling (simulated email sending)
-     const form = document.getElementById("bookingForm");
+     const form = document.getElementById("booking-form");
     const thankYou = document.getElementById("thanksMsg");
 
     form.addEventListener("submit", function (e) {
@@ -805,7 +805,6 @@ I highly recommend it to anyone in need of reliable and top-quality service. Spe
           }
         });
     });
-  </script>
             // Validation rules
             const alphaRegex = /^[a-zA-Z\s]+$/; // Allows alphabets and spaces
             const numericRegex = /^\d+$/; // Allows only digits

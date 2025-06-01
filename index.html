@@ -214,6 +214,123 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
             transform: translateY(-8px) scale(1.02); /* More pronounced lift */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
+
+   font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-car-img {
+      animation: carFloat 3s ease-in-out infinite alternate;
+      max-width: 100%;
+      height: auto;
+    }
+    @keyframes carFloat {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-15px);
+      }
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      transform: scale(0.9);
+      opacity: 0;
+      animation: modalPopIn 0.3s forwards ease-out;
+    }
+    @keyframes modalPopIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #FFD700;
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-primary,
+    .btn-dark {
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-primary {
+      background-color: #FFD700;
+      color: #1a1a1a;
+    }
+    .btn-primary:hover {
+      background-color: #FFC107;
+      transform: translateY(-2px) scale(1.02);
+    }
+    .btn-dark {
+      background-color: #1a1a1a;
+      color: #FFD700;
+    }
+    .btn-dark:hover {
+      background-color: #333;
+      transform: translateY(-2px) scale(1.02);
+    }
+    .footer-link {
+      transition: all 0.2s ease-in-out;
+    }
+    .footer-link:hover {
+      color: #FFD700;
+      transform: translateX(5px);
+    }
+    @media (max-width: 640px) {
+      .hero-section h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+      .modal-content {
+        width: 95%;
+        padding: 15px;
+      }
+      .btn-primary,
+      .btn-dark {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+      }
+      .car-card,
+      .blog-card {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+        
+        
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">

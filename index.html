@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="keywords" content="
 Muskan Cabs, Muskan Cab Service, Muskan Cabs Ahmedabad, taxi in Ahmedabad, cab booking Ahmedabad,
 airport taxi Ahmedabad, Muskan taxi booking, online taxi Ahmedabad, taxi near me Ahmedabad,
@@ -26,22 +23,31 @@ Ahmedabad taxi app, book cab Muskan Cabs, COD cab service, taxi ride now Ahmedab
 best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstation cab service
 ">
 
-
     <title>Muskan CABS Ahmedabad - Premium Taxi & Car Rental Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
+        /* Base styles for HTML and Body */
+        html, body {
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+
+        /* Default responsive images, Tailwind often handles this with w-full h-auto */
+        img {
+            max-width: 100%;
+            height: auto;
+            /* display: block; /* Can cause layout issues if not intended, use with care or on specific images */
+            border-radius: 0.5rem; /* Default rounded corners for images */
         }
 
         /* Custom scroll-reveal animation styles */
         .animate-on-scroll {
             opacity: 0;
-            transform: translateY(30px); /* Increased initial translation for more impact */
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Slower transition */
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         .animate-on-scroll.is-visible {
             opacity: 1;
@@ -57,26 +63,27 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
         .animate-on-scroll.delay-700 { transition-delay: 0.7s; }
         .animate-on-scroll.delay-800 { transition-delay: 0.8s; }
 
-        /* Custom button styling for a more pronounced effect */
+        /* Custom button styling */
         .btn-primary {
-            @apply px-8 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out;
+            /* Base padding and text size, responsive adjustments with sm: prefix */
+            @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out text-sm sm:text-base sm:px-8;
             background-color: #FFD700; /* Yellow */
             color: #1a1a1a; /* Dark text */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px;
         }
         .btn-primary:hover {
             background-color: #FFC107; /* Slightly darker yellow */
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px) scale(1.02); /* Added slight scale */
+            transform: translateY(-2px) scale(1.02);
         }
         .btn-primary:active {
-            transform: translateY(0) scale(0.98); /* Added active state */
+            transform: translateY(0) scale(0.98);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .btn-dark {
-            @apply px-8 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out;
+            /* Base padding and text size, responsive adjustments with sm: prefix */
+            @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out text-sm sm:text-base sm:px-8;
             background-color: #1a1a1a; /* Dark */
             color: #FFD700; /* Yellow text */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -84,20 +91,22 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
         .btn-dark:hover {
             background-color: #333333; /* Slightly lighter dark */
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px) scale(1.02); /* Added slight scale */
+            transform: translateY(-2px) scale(1.02);
         }
         .btn-dark:active {
-            transform: translateY(0) scale(0.98); /* Added active state */
+            transform: translateY(0) scale(0.98);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         /* Hero section specific styling */
         .hero-section {
+            /* Using a placeholder image for the background */
             background-image: url('Image/banner/1.jpeg');
             background-size: cover;
             background-position: center;
             position: relative;
-            overflow: hidden;
+            overflow: hidden; /* Contain the pseudo-element and any absolutely positioned children */
+            padding: 4rem 1rem; /* Default padding, will be adjusted for mobile */
         }
         .hero-section::before {
             content: '';
@@ -106,45 +115,51 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+            /* Gradient overlay for better text contrast */
+            background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.1) 100%);
         }
 
-        /* Hero car specific animation */
+        /* Hero car image specific animation and styling */
         .hero-car-img {
             animation: carFloat 3s ease-in-out infinite alternate;
+            max-width: 100%; /* Ensures image is responsive */
+            height: auto;    /* Maintains aspect ratio */
+            border-radius: 0.75rem; /* Equivalent to Tailwind's rounded-lg */
+            /* Default margin, can be overridden by utility classes or specific selectors */
+            /* Positioning is handled by Tailwind classes in the example HTML */
         }
         @keyframes carFloat {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-15px); }
+            100% { transform: translateY(-10px); } /* Slightly reduced float for subtlety */
         }
 
         /* Modal styling */
         .modal {
             display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
+            position: fixed;
             z-index: 1000; /* Sit on top */
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
+            width: 100%;
+            height: 100%;
             overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-            justify-content: center;
-            align-items: center;
+            background-color: rgba(0,0,0,0.5); /* Darker overlay */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
         }
         .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            width: 90%;
-            max-width: 500px;
+            background-color: #ffffff;
+            margin: auto; /* Center in the viewport */
+            padding: 25px; /* Increased padding */
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Softer, larger shadow */
+            width: 90%; /* Responsive width */
+            max-width: 450px; /* Max width for larger screens */
             text-align: center;
             position: relative;
-            transform: scale(0.9); /* Initial scale for modal entry animation */
-            opacity: 0;
-            animation: modalPopIn 0.3s forwards ease-out;
+            transform: scale(0.95); /* Initial state for animation */
+            opacity: 0; /* Initial state for animation */
+            animation: modalPopIn 0.4s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28); /* Smoother pop-in animation */
         }
         @keyframes modalPopIn {
             to {
@@ -153,196 +168,209 @@ best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstat
             }
         }
         .close-button {
-            color: #aaa;
+            color: #888; /* Lighter grey */
             position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 28px;
-            font-weight: bold;
+            top: 12px;
+            right: 15px;
+            font-size: 32px; /* Larger for easier clicking */
+            font-weight: normal;
             cursor: pointer;
-            transition: color 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
         }
         .close-button:hover,
         .close-button:focus {
-            color: black;
+            color: #333; /* Darker on hover */
+            transform: scale(1.1);
             text-decoration: none;
-            cursor: pointer;
         }
 
         /* Form input focus animation */
-        input:focus, select:focus {
+        input:focus, select:focus, textarea:focus { /* Added textarea */
             outline: none;
-            border-color: #FFD700; /* Yellow border on focus */
-            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3); /* Yellow glow on focus */
+            /* Ensure yellow border and shadow on focus, !important if Tailwind overrides */
+            border-color: #FFD700 !important;
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.35) !important;
             transition: all 0.2s ease-in-out;
         }
 
-        /* Image hover effects in About Us section */
-        .about-img-main:hover {
-            transform: rotate(-1deg) scale(1.02); /* Slight scale and less rotation */
+        /* Image hover effects (e.g., in About Us section) */
+        .about-img-main, .about-img-top, .about-img-bottom {
+            transition: transform 0.3s ease-in-out;
+            border-radius: 0.75rem; /* Consistent rounded corners */
         }
-        .about-img-top:hover {
-            transform: rotate(3deg) scale(1.05); /* Slight scale and less rotation */
-        }
-        .about-img-bottom:hover {
-            transform: rotate(8deg) scale(1.05); /* Slight scale and less rotation */
-        }
+        .about-img-main:hover { transform: rotate(-1deg) scale(1.03); }
+        .about-img-top:hover { transform: rotate(2deg) scale(1.04); }
+        .about-img-bottom:hover { transform: rotate(5deg) scale(1.04); }
 
         /* Social media icon hover effect */
+        .social-icon {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border-radius: 9999px; /* Ensure it's circular for icon background */
+        }
         .social-icon:hover {
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px) scale(1.15);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
         }
 
         /* Footer link hover effect */
+        .footer-link {
+            transition: all 0.25s ease-in-out;
+        }
         .footer-link:hover {
             color: #FFD700;
-            transform: translateX(5px);
-        }
-        .footer-link {
-            transition: all 0.2s ease-in-out;
+            transform: translateX(4px);
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Subtle glow */
         }
 
-        /* Car card hover effect */
-        .car-card:hover {
-            transform: translateY(-8px) scale(1.02); /* More pronounced lift */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        /* Card hover effect (generic for .car-card, .blog-card, etc.) */
+        .car-card, .blog-card { /* Assuming these are common classes for cards */
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            border-radius: 0.75rem; /* Tailwind rounded-xl */
+            overflow: hidden; /* Ensure content respects border radius */
+        }
+        .car-card:hover, .blog-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
-        /* Blog card hover effect */
-        .blog-card:hover {
-            transform: translateY(-8px) scale(1.02); /* More pronounced lift */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) { /* Tablet and below */
+            .hero-section {
+                padding: 3rem 1rem; /* Adjust padding for tablets */
+            }
+            /* Hero text sizing for tablets - using Tailwind classes directly in HTML is often preferred */
+            /* Example: <h1 class="text-5xl md:text-6xl ..."> */
+            .hero-section h1 {
+                font-size: 2.5rem; /* Tailwind text-4xl is 2.25rem, text-5xl is 3rem. Adjust as needed. */
+                line-height: 1.2;
+            }
+             .hero-section p {
+                font-size: 1rem; /* Tailwind text-base */
+                line-height: 1.6;
+            }
+            /* Button padding and font-size are already responsive via sm: prefixes in their definitions */
         }
 
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .animate-on-scroll.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .hero-car-img {
-      animation: carFloat 3s ease-in-out infinite alternate;
-      max-width: 100%;
-      height: auto;
-    }
-    @keyframes carFloat {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-15px);
-      }
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      width: 90%;
-      max-width: 500px;
-      text-align: center;
-      transform: scale(0.9);
-      opacity: 0;
-      animation: modalPopIn 0.3s forwards ease-out;
-    }
-    @keyframes modalPopIn {
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-    input:focus,
-    select:focus {
-      outline: none;
-      border-color: #FFD700;
-      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
-      transition: all 0.2s ease-in-out;
-    }
-    .btn-primary,
-    .btn-dark {
-      padding: 10px 20px;
-      border-radius: 9999px;
-      font-weight: 600;
-      transition: all 0.3s ease-in-out;
-    }
-    .btn-primary {
-      background-color: #FFD700;
-      color: #1a1a1a;
-    }
-    .btn-primary:hover {
-      background-color: #FFC107;
-      transform: translateY(-2px) scale(1.02);
-    }
-    .btn-dark {
-      background-color: #1a1a1a;
-      color: #FFD700;
-    }
-    .btn-dark:hover {
-      background-color: #333;
-      transform: translateY(-2px) scale(1.02);
-    }
-    .footer-link {
-      transition: all 0.2s ease-in-out;
-    }
-    .footer-link:hover {
-      color: #FFD700;
-      transform: translateX(5px);
-    }
-    @media (max-width: 640px) {
-      header .flex {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
-      .hero-section h1 {
-        font-size: 1.75rem;
-        line-height: 2.25rem;
-      }
-      .hero-section p {
-        font-size: 0.875rem;
-      }
-      .modal-content {
-        width: 95%;
-        padding: 15px;
-      }
-      .btn-primary,
-      .btn-dark {
-        font-size: 0.875rem;
-        padding: 8px 16px;
-      }
-      .car-card,
-      .blog-card {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      nav#main-nav {
-        padding: 0.5rem 1rem;
-      }
-      nav#main-nav a.text-2xl {
-        font-size: 1.25rem;
-      }
-    }
+        @media (max-width: 640px) { /* Mobile devices */
+            /* Header adjustments: Typically handled by Tailwind classes like `flex-col sm:flex-row` on the header element itself. */
+            /* Example for a specific header structure if needed: */
+            /* header > .container { flex-direction: column; align-items: flex-start !important; } */
+            /* header nav { margin-top: 1rem; width: 100%; } */
+            /* header nav ul { flex-direction: column; align-items: flex-start; width: 100%; } */
+            /* header nav ul li { margin-bottom: 0.5rem; width: 100%; } */
+            /* header nav ul li a { display: block; padding: 0.5rem 0; } */
+
+            /* Navigation bar specific adjustments (if ID 'main-nav' is used) */
+            nav#main-nav { /* Assuming #main-nav is the <nav> element */
+                padding-top: 0.5rem; /* Adjust spacing if nav stacks */
+            }
+            /* Adjust logo text size if it has a specific class */
+            .logo-text-class { /* Example class for logo text */
+                font-size: 1.5rem; /* text-2xl */
+            }
+            /* Adjust nav link font size if needed */
+            nav#main-nav a {
+                font-size: 0.95rem; /* Slightly smaller than text-base */
+            }
+
+            .hero-section {
+                padding: 2.5rem 1rem; /* Further adjust padding for mobile hero */
+                text-align: center; /* Center text on mobile */
+            }
+            .hero-section::before { /* Less aggressive gradient on mobile if text is lighter */
+                 background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 100%);
+            }
+            .hero-section h1 {
+                font-size: 1.875rem; /* text-3xl */
+                line-height: 1.3;
+            }
+            .hero-section p {
+                font-size: 0.875rem; /* text-sm */
+                line-height: 1.5;
+                margin-bottom: 1.5rem; /* Space before buttons */
+            }
+            /* Specific mobile styling for hero image if it's positioned with CSS */
+            /* If using Tailwind for positioning, those classes (e.g., hidden sm:block) would control visibility/layout */
+            img.hero-car-img.absolute { /* If it's absolutely positioned */
+                 width: 60%; /* Adjust width for mobile */
+                 max-width: 280px; /* Control max size on mobile */
+                 right: 5%; /* Adjust position */
+                 bottom: 5%;
+            }
+
+
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .close-button {
+                font-size: 28px;
+                top: 8px;
+                right: 12px;
+            }
+
+            /* Buttons are already mobile-first with sm: for larger sizes */
+            /* .btn-primary, .btn-dark { font-size: 0.875rem; padding: 10px 20px; } */
+
+             /* Container for hero buttons if they need to stack */
+            .hero-buttons-container {
+                /* Use Tailwind: flex flex-col gap-3 items-center sm:flex-row sm:justify-center md:justify-start */
+                /* If not using Tailwind for this specific part: */
+                /* display: flex; */
+                /* flex-direction: column; */
+                /* gap: 0.75rem; */
+                /* align-items: center; */
+            }
+
+            /* Cards: stack them and make them take more width */
+            .car-card, .blog-card {
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%; /* Or 100% if padding is inside the card */
+                margin-bottom: 1.5rem; /* Space between stacked cards */
+            }
+            .car-card:last-child, .blog-card:last-child {
+                margin-bottom: 0;
+            }
+
+            /* Footer adjustments: stack columns and center text */
+            /* footer .grid { grid-template-columns: 1fr !important; } */
+            /* footer .grid > div { text-align: center; margin-bottom: 1.5rem; } */
+            /* footer .social-icons-container { justify-content: center; } */
+
+
+            /* General text size adjustments for readability */
+            body {
+                font-size: 15px; /* Base font size for mobile */
+            }
+            h2 { font-size: 1.625rem; /* Slightly larger than text-2xl */ line-height: 1.3; }
+            h3 { font-size: 1.375rem; /* Slightly larger than text-xl */ line-height: 1.4; }
+        }
+
+         @media (max-width: 480px) { /* Extra small screens */
+            .hero-section h1 {
+                font-size: 1.625rem; /* A bit smaller */
+                line-height: 1.3;
+            }
+            .hero-section p {
+                font-size: 0.8rem; /* Slightly smaller than text-sm */
+                margin-bottom: 1.25rem;
+            }
+             .btn-primary, .btn-dark {
+                /* Base styles are already small, sm: makes them larger. This is fine. */
+                /* If further reduction needed: */
+                /* font-size: 0.8rem; */
+                /* padding: 8px 16px; */
+            }
+            img.hero-car-img.absolute {
+                 width: 70%;
+                 max-width: 240px;
+            }
+            h2 { font-size: 1.5rem; } /* text-2xl */
+            h3 { font-size: 1.25rem; } /* text-xl */
+         }
+    </style>
         
     </style>
 </head>

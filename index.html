@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="
+Muskan Cabs, Muskan Cab Service, Muskan Cabs Ahmedabad, taxi in Ahmedabad, cab booking Ahmedabad,
+airport taxi Ahmedabad, Muskan taxi booking, online taxi Ahmedabad, taxi near me Ahmedabad,
+affordable cab service, 24x7 cab Ahmedabad, reliable taxi Ahmedabad, cheap cab Ahmedabad,
+Ahmedabad airport pickup, cab for outstation, outstation taxi Ahmedabad, best taxi Gujarat,
+book cab online, taxi phone booking, emergency cab, family cab Ahmedabad, SUV cab Ahmedabad,
+business cab Ahmedabad, local taxi Gujarat, cab fare Ahmedabad, professional drivers Ahmedabad,
+Muskan taxi Gujarat, Ahmedabad taxi service, best cab company Ahmedabad, top taxi Ahmedabad,
+cab with COD, pay after ride taxi, wedding cab service, corporate taxi Ahmedabad, Muskan Cabs Vishala,
+Muskan Cabs Sanklit Nagar, long distance taxi Ahmedabad, tempo traveller Ahmedabad, cab for tourists,
+cab to Sardar Vallabhbhai Patel Airport, Muskan car booking, Muskan taxi number, budget cab Gujarat,
+Innova cab Ahmedabad, 6 seater cab Ahmedabad, 7 seater taxi Ahmedabad, taxi to Rajkot, taxi to Surat,
+taxi to Gandhinagar, Muskan Cabs booking number, late night cab Ahmedabad, daily taxi service,
+trusted cab Ahmedabad, clean cabs, women safe taxi, AC cab Ahmedabad, sedan cab Ahmedabad,
+luxury cab Ahmedabad, best cab for airport, Muskan Cab rental, hourly taxi Ahmedabad, pay on delivery cab,
+low fare cab Ahmedabad, city cab Gujarat, one way taxi Ahmedabad, Muskan ride booking, driver on time,
+Ahmedabad sightseeing taxi, private cab service, hotel pickup cab, train station cab Ahmedabad,
+group travel cab Ahmedabad, Ahmedabad city tours cab, top cab service in Gujarat, cab booking WhatsApp,
+Ahmedabad taxi app, book cab Muskan Cabs, COD cab service, taxi ride now Ahmedabad, Muskan cabs official,
+best Muskan Cabs Gujarat, cab agency Ahmedabad, personal taxi Ahmedabad, outstation cab service
+">
+
+
+    <title>Muskan CABS Ahmedabad - Premium Taxi & Car Rental Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
+
+        /* Custom scroll-reveal animation styles */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px); /* Increased initial translation for more impact */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Slower transition */
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Specific animation delays for staggered effects */
+        .animate-on-scroll.delay-100 { transition-delay: 0.1s; }
+        .animate-on-scroll.delay-200 { transition-delay: 0.2s; }
+        .animate-on-scroll.delay-300 { transition-delay: 0.3s; }
+        .animate-on-scroll.delay-400 { transition-delay: 0.4s; }
+        .animate-on-scroll.delay-500 { transition-delay: 0.5s; }
+        .animate-on-scroll.delay-600 { transition-delay: 0.6s; }
+        .animate-on-scroll.delay-700 { transition-delay: 0.7s; }
+        .animate-on-scroll.delay-800 { transition-delay: 0.8s; }
+
+        /* Custom button styling for a more pronounced effect */
+        .btn-primary {
+            @apply px-8 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out;
+            background-color: #FFD700; /* Yellow */
+            color: #1a1a1a; /* Dark text */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #FFC107; /* Slightly darker yellow */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px) scale(1.02); /* Added slight scale */
+        }
+        .btn-primary:active {
+            transform: translateY(0) scale(0.98); /* Added active state */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-dark {
+            @apply px-8 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out;
+            background-color: #1a1a1a; /* Dark */
+            color: #FFD700; /* Yellow text */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-dark:hover {
+            background-color: #333333; /* Slightly lighter dark */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px) scale(1.02); /* Added slight scale */
+        }
+        .btn-dark:active {
+            transform: translateY(0) scale(0.98); /* Added active state */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hero section specific styling */
+        .hero-section {
+            background-image: url('Image/banner/1.jpeg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+        }
+
+        /* Hero car specific animation */
+        .hero-car-img {
+            animation: carFloat 3s ease-in-out infinite alternate;
+        }
+        @keyframes carFloat {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            transform: scale(0.9); /* Initial scale for modal entry animation */
+            opacity: 0;
+            animation: modalPopIn 0.3s forwards ease-out;
+        }
+        @keyframes modalPopIn {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Form input focus animation */
+        input:focus, select:focus {
+            outline: none;
+            border-color: #FFD700; /* Yellow border on focus */
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3); /* Yellow glow on focus */
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Image hover effects in About Us section */
+        .about-img-main:hover {
+            transform: rotate(-1deg) scale(1.02); /* Slight scale and less rotation */
+        }
+        .about-img-top:hover {
+            transform: rotate(3deg) scale(1.05); /* Slight scale and less rotation */
+        }
+        .about-img-bottom:hover {
+            transform: rotate(8deg) scale(1.05); /* Slight scale and less rotation */
+        }
+
+        /* Social media icon hover effect */
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer link hover effect */
+        .footer-link:hover {
+            color: #FFD700;
+            transform: translateX(5px);
+        }
+        .footer-link {
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Car card hover effect */
+        .car-card:hover {
+            transform: translateY(-8px) scale(1.02); /* More pronounced lift */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Blog card hover effect */
+        .blog-card:hover {
+            transform: translateY(-8px) scale(1.02); /* More pronounced lift */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-yellow-400 py-2 text-sm text-gray-900">
+        <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-4">
+                <a href="muskancabservice.ahm@gmail.com" class="flex items-center space-x-2 transition-all duration-300 hover:text-gray-700 rounded-full p-2 hover:bg-yellow-300">
+                    <i class="fas fa-envelope"></i>
+                    <span>muskancabservice.ahm@gmail.com</span>
+                </a>
+                <a href="https://maps.app.goo.gl/example" target="_blank" class="flex items-center space-x-2 transition-all duration-300 hover:text-gray-700 rounded-full p-2 hover:bg-yellow-300">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>3rd floor, Al Muqaam, Sanklit Nagar, Vishala, Ahmedabad, Gujarat 380007</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#booking-form" class="flex items-center space-x-2 transition-all duration-300 hover:text-gray-700 rounded-full p-2 hover:bg-yellow-300">
+                    <i class="fas fa-user"></i>
+                    <span> Book Now</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav id="main-nav" class="bg-white py-4 shadow-md sticky top-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+            <a href="#home" class="flex items-center space-x-2 text-2xl font-bold text-gray-900">
+                <img src="https://placehold.co/40x40/FFD700/1a1a1a?text=MC" alt="Muskan CABS Logo" class="rounded-full">
+                <span> Muskan Cabs </span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300">HOME</a>
+                <a href="#about" class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300">ABOUT US</a>
+                <a href="#services" class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300">SERVICES</a>
+              <!---  <div class="relative group">
+                    <button class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300 flex items-center">
+                        PAGES <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 z-10 opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 invisible">
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">FAQ</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Pricing</a>
+                    </div>
+                </div>
+                <a href="#blog" class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300">BLOG</a> -->
+                <a href="page/contact.html" class="text-gray-700 hover:text-yellow-500 font-medium transition-colors duration-300">CONTACT</a>
+                <a href="#booking-form" class="text-red-600 hover:text-green-600 font-medium transition-colors duration-300">Book Now</a>
+            </div>
+            <button class="lg:hidden text-gray-700 text-2xl" id="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white py-4 shadow-inner">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-yellow-500 font-medium">HOME</a>
+                <a href="#about" class="text-gray-700 hover:text-yellow-500 font-medium">ABOUT US</a>
+                <a href="#services" class="text-gray-700 hover:text-yellow-500 font-medium">SERVICES</a>
+               <!--- <a href="#" class="text-gray-700 hover:text-yellow-500 font-medium">PAGES</a> > --->
+                <!--- <a href="#blog" class="text-gray-700 hover:text-yellow-500 font-medium">BLOG</a> --->
+                <a href="page/contact.html" class="text-gray-700 hover:text-yellow-500 font-medium">CONTACT</a> 
+                <a href="#booking-form" class="btn-primary w-max flex items-center space-x-2">
+                    <i class="fas fa-taxi"></i>
+                    <span>BOOK A TAXI</span>
+                </a>
+            </nav>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section relative h-screen flex items-center justify-start text-white py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl">
+                <p class="text-yellow-400 text-lg font-semibold mb-4 animate-on-scroll delay-100"><i class="fas fa-star mr-2"></i>BEST SERVICE IN TOWN</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-8 animate-on-scroll delay-200">
+                    Book Your Taxi From <br> Anywhere Today
+                </h1>
+                <div class="flex items-center space-x-4 animate-on-scroll delay-300">
+                    <a href="#services" class="btn-primary flex items-center space-x-2">
+                        <span>OUR SERVICES</span>
+                    </a>
+                    <button class="w-12 h-12 bg-yellow-400 text-gray-900 rounded-full flex items-center justify-center text-lg transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="absolute bottom-0 right-0 w-1/2 md:w-1/5 lg:w-1/4 animate-on-scroll delay-400">
+                <img src="Image/Car/banner-pic.JPG" style="border-top-left-radius:100px" alt="Yellow Taxi Car" class="w-full h-auto object-cover hero-car-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 relative animate-on-scroll delay-100">
+                <img src="Image/Car/About-back.jpeg" alt="Happy Client in Car" class="rounded-xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-500 about-img-main">
+                <div class="absolute top-8 left-8 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3 transform rotate-6 hover:rotate-0 transition-transform duration-500 about-img-top">
+                    <i class="fas fa-users text-yellow-500 text-3xl"></i>
+                    <div>
+                        <p class="text-3xl font-bold text-gray-900">6561+</p>
+                        <p class="text-gray-600">Satisfied Clients</p>
+                    </div>
+                </div>
+<img src="Image/Car/about-front.jpeg"
+     alt="Car Interior"
+     style="width: 300px; height: auto;"
+     class="absolute bottom-8 right-8 rounded-xl shadow-lg transform rotate-12 hover:rotate-0 transition-transform duration-500 about-img-bottom">
+            </div>
+            <div class="lg:w-1/2 animate-on-scroll delay-200">
+                <p class="text-yellow-500 text-lg font-semibold mb-4"><i class="fas fa-info-circle mr-2"></i>ABOUT OUR COMPANY</p>
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-gray-900">
+                    Reliable Taxi Services in India
+ <br> Range Of Cars
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Whether you're planning a business trip, a family vacation, or a one-way ride to another city, our trusted car and taxi services from Ahmedabad are here to take you anywhere across India. We ensure comfortable rides, professional drivers, and well-maintained vehicles for a smooth and stress-free journey. With our wide range of car options, you can choose the perfect ride for every occasion.s
+                </p>
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="w-16 h-16 bg-yellow-400 text-gray-900 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 text-sm"> Call Us</p>
+                        <a href="tel:+91 99091-79470" class="text-xl font-bold text-gray-900 hover:text-yellow-500 transition-colors duration-300">+91 99091-79470</a>
+                    </div>
+                </div>
+                <a href="#booking-form" class="btn-primary">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="services" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-yellow-500 text-lg font-semibold mb-4 animate-on-scroll"><i class="fas fa-car mr-2"></i>OUR CABS</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-12 animate-on-scroll delay-100">Choose Your Perfect Ride</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden car-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-200">
+                    <div class="bg-yellow-400 p-6 relative">
+                        <span class="absolute top-4 left-4 bg-gray-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full">₹18/Km</span>
+                        <img src="Image/Services/Innova (2).jpg" alt="Silverado" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold mb-2"> INNOVA CRYSTA</h3>
+                        <p class="text-gray-400 mb-4">(SUV)n</p>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li class="flex justify-between"><span>CRYSTA</span> <span class="font-bold text-yellow-400">₹18/Km</span></li>
+                            <li class="flex justify-between"><span> SEATS </span> <span class="font-bold text-yellow-400"> 7 + 1  </span></li>
+                             <li class="flex justify-between"><span>Bag:</span> <span class="font-bold text-yellow-400">03 Bag</span></li>
+                            <li class="flex justify-between"><span>Passengers Seat:</span> <span class="font-bold text-yellow-400">07 Seat</span></li>
+                        </ul>
+                        <a href="#booking-form" class="btn-primary w-full text-center flex items-center justify-center space-x-2">
+                            <i class="fas fa-car-side"></i>
+                            <span>BOOK NOW</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden car-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-300">
+                    <div class="bg-yellow-400 p-6 relative">
+                        <span class="absolute top-4 left-4 bg-gray-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full">₹15/Km</span>
+                        <img src="Image/Services/kia-1.jpg" alt="Pathfinder" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold mb-2"> KIA </h3>
+                        <p class="text-gray-400 mb-4">KIA</p>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li class="flex justify-between"><span>KIA</span> <span class="font-bold text-yellow-400">₹15/Km</span></li>
+                            <li class="flex justify-between"><span> SEATS </span> <span class="font-bold text-yellow-400"> 6 + 1  </span></li>
+                              <li class="flex justify-between"><span>Bag:</span> <span class="font-bold text-yellow-400">02 Bag</span></li>
+                            <li class="flex justify-between"><span>Passengers Seat:</span> <span class="font-bold text-yellow-400">07 Seat</span></li>
+                        </ul>
+                        <a href="#booking-form" class="btn-primary w-full text-center flex items-center justify-center space-x-2">
+                            <i class="fas fa-car-side"></i>
+                            <span>BOOK NOW</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden car-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-400">
+                    <div class="bg-yellow-400 p-6 relative">
+                        <span class="absolute top-4 left-4 bg-gray-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full">₹18/Km</span>
+                        <img src="Image/Services/SUV.jpg" alt="Mazda3" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold mb-2"> INNOVA SUV </h3>
+                        <p class="text-gray-400 mb-4">(SUV)n</p>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li class="flex justify-between"><span> CRYSTA </span> <span class="font-bold text-yellow-400">₹18/Km</span></li>
+                            <li class="flex justify-between"><span> SEATS </span> <span class="font-bold text-yellow-400"> 7 + 1  </span></li>
+                              <li class="flex justify-between"><span>Bag:</span> <span class="font-bold text-yellow-400">03 Bag</span></li>
+                            <li class="flex justify-between"><span>Passengers Seat:</span> <span class="font-bold text-yellow-400">07 Seat</span></li>
+                        </ul>
+                        <a href="#booking-form" class="btn-primary w-full text-center flex items-center justify-center space-x-2">
+                            <i class="fas fa-car-side"></i>
+                            <span>BOOK NOW</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden car-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-500">
+                    <div class="bg-yellow-400 p-6 relative">
+                        <span class="absolute top-4 left-4 bg-gray-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full">₹14/Km</span>
+                        <img src="Image/Services/Swift-1.jpg" alt="Santa Fe" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="text-2xl font-bold mb-2">SWIFT DZIRE - (SEDAN)</h3>
+                        <p class="text-gray-400 mb-4">SEDAN</p>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li class="flex justify-between"><span>DZIRE</span> <span class="font-bold text-yellow-400">₹14/Km</span></li>
+                            <li class="flex justify-between"><span> SEATS </span> <span class="font-bold text-yellow-400"> 4 + 1  </span></li>
+                            <li class="flex justify-between"><span>Bag:</span> <span class="font-bold text-yellow-400">02 Bag</span></li>
+                            <li class="flex justify-between"><span>Passengers Seat:</span> <span class="font-bold text-yellow-400">04 Seat</span></li>
+                        </ul>
+                        <a href="#booking-form" class="btn-primary w-full text-center flex items-center justify-center space-x-2">
+                            <i class="fas fa-car-side"></i>
+                            <span>BOOK NOW</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+*/
+
+
+
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-yellow-500 text-lg font-semibold mb-4 animate-on-scroll"><i class="fas fa-quote-left mr-2"></i>TESTIMONIALS</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-12 text-gray-900 animate-on-scroll delay-100">
+                What Our Client's Say About Us
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-200">
+                    <img src="pic/1.png" alt="Esther Howard" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-yellow-400">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Vedant Rathi</h3>
+                    <p class="text-gray-600 mb-4"> Traveller </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        I had an excellent experience with this cab agency! The driver, Moin, was outstanding. Not only was he punctual, but his driving skills were top-notch—smooth, safe, and very comfortable. He also knew the best routes and ensured I reached my destination quickly. Highly recommend this service and Moin for anyone looking for a reliable and professional driver!
+                    </p>
+                    <div class="flex justify-center text-yellow-500 text-lg">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-300">
+                    <img src="pic/2.png" alt="Leslie Alexander" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-yellow-400">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Ravi Chourdia</h3>
+                    <p class="text-gray-600 mb-4">Traveller</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Had a great experience with this cab services . Driven Moeen was very courteous and drove very safely and was always on time. Was very friendly and well behaved . Will definitely recommend this cab service to anyone visiting Gujarat and need a cab with driver
+
+                    </p>
+                    <div class="flex justify-center text-yellow-500 text-lg">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-400">
+                    <img src="https://placehold.co/80x80/FFD700/1a1a1a?text=HS" alt="Ralph Edwards" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-yellow-400">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Hem Shukla</h3>
+                    <p class="text-gray-600 mb-4">Traveller</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        I had a great experience with Muskan Cab Services. The ride was smooth, punctual, and the vehicle was well-maintained. Special thanks to Mr. Shabbir, the owner, for his professionalism and friendly nature. He ensured everything was perfect and went above and beyond to make the trip comfortable. Highly recommended for reliable and efficient service!
+                    </p>
+                    <div class="flex justify-center text-yellow-500 text-lg">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-500">
+                    <img src="pic/3.png" alt="Jane Wilson" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-yellow-400">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Rohit Parchure</h3>
+                    <p class="text-gray-600 mb-4">Marketing Manager</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        I recently had the pleasure of using this tour and cab service during my trip, and I can confidently say it exceeded all expectations.
+
+The cab was clean, comfortable, and well-maintained, ensuring a smooth and pleasant ride throughout the journey. What truly set this service apart, though, was our driver, Sheru.
+
+I highly recommend it to anyone in need of reliable and top-quality service. Special thanks to Sheru for making our trip unforgettable!
+                    </p>
+                    <div class="flex justify-center text-yellow-500 text-lg">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!---
+
+    <section id="blog" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-yellow-500 text-lg font-semibold mb-4 animate-on-scroll"><i class="fas fa-newspaper mr-2"></i>OUR LATEST NEWS</p>
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 animate-on-scroll delay-100">
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-6 md:mb-0">
+                    Latest News And <br> Blog On Muskan CABS
+                </h2>
+                <a href="#all-blog" class="btn-dark">VIEW ALL BLOG</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-200">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x250/1a1a1a/FFD700?text=Blog+Image+1" alt="Blog Post 1" class="w-full h-48 object-cover">
+                        <span class="absolute bottom-0 left-0 bg-yellow-400 text-gray-900 px-4 py-2 font-bold rounded-tr-lg">04 MAY</span>
+                    </div>
+                    <div class="p-6 text-left">
+                        <p class="text-gray-500 text-sm mb-2">By Muskan CABSWP | 2 Comments</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Cupidatat Nonproident, Sunt In Culpa Qui</h3>
+                        <a href="#" class="text-yellow-500 hover:text-yellow-600 font-semibold flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-300">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x250/1a1a1a/FFD700?text=Blog+Image+2" alt="Blog Post 2" class="w-full h-48 object-cover">
+                        <span class="absolute bottom-0 left-0 bg-yellow-400 text-gray-900 px-4 py-2 font-bold rounded-tr-lg">04 MAY</span>
+                    </div>
+                    <div class="p-6 text-left">
+                        <p class="text-gray-500 text-sm mb-2">By Muskan CABSWP | 2 Comments</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Big Data. Are There Any Leftovers Kitchen</h3>
+                        <a href="#" class="text-yellow-500 hover:text-yellow-600 font-semibold flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-400">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x250/1a1a1a/FFD700?text=Blog+Image+3" alt="Blog Post 3" class="w-full h-48 object-cover">
+                        <span class="absolute bottom-0 left-0 bg-yellow-400 text-gray-900 px-4 py-2 font-bold rounded-tr-lg">04 MAY</span>
+                    </div>
+                    <div class="p-6 text-left">
+                        <p class="text-gray-500 text-sm mb-2">By Muskan CABSWP | 2 Comments</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">A Simple Lift And Shift Job Going Forward.</h3>
+                        <a href="#" class="text-yellow-500 hover:text-yellow-600 font-semibold flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card transform hover:-translate-y-2 transition-transform duration-300 animate-on-scroll delay-500">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x250/1a1a1a/FFD700?text=Blog+Image+4" alt="Blog Post 4" class="w-full h-48 object-cover">
+                        <span class="absolute bottom-0 left-0 bg-yellow-400 text-gray-900 px-4 py-2 font-bold rounded-tr-lg">04 MAY</span>
+                    </div>
+                    <div class="p-6 text-left">
+                        <p class="text-gray-500 text-sm mb-2">By Muskan CABSWP | 2 Comments</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">My Capacity Is Full We're Building Plane</h3>
+                        <a href="#" class="text-yellow-500 hover:text-yellow-600 font-semibold flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+--->
+    <section id="booking-form" class="py-20 bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/FFD700?text=Booking+Background'); background-size: cover; background-position: center;"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-12 animate-on-scroll">BOOK FOR A RIDE</h2>
+
+            <form id="taxiBookingForm" class="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-4xl mx-auto text-gray-900 animate-on-scroll delay-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label for="name" class="block text-left text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name Here" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-left text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+(01) xxx - xxx - xx" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                    </div>
+                    <div>
+                        <label for="from" class="block text-left text-gray-700 text-sm font-bold mb-2">From</label>
+                        <input type="text" id="from" name="from" placeholder="Starting Place" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                    </div>
+                    <div>
+                        <label for="to" class="block text-left text-gray-700 text-sm font-bold mb-2">To</label>
+                        <input type="text" id="to" name="to" placeholder="Destination" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                    </div>
+                    <div class="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <label for="date" class="block text-left text-gray-700 text-sm font-bold mb-2">Date & Time</label>
+                            <input type="date" id="date" name="date" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                        </div>
+                        <div>
+                            <label for="time-hh" class="block text-left text-gray-700 text-sm font-bold mb-2"> </label>
+                            <input type="number" id="time-hh" name="time-hh" placeholder="HH" min="0" max="23" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                        </div>
+                        <div>
+                            <label for="time-mm" class="block text-left text-gray-700 text-sm font-bold mb-2"> </label>
+                            <input type="number" id="time-mm" name="time-mm" placeholder="MM" min="0" max="59" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="passenger" class="block text-left text-gray-700 text-sm font-bold mb-2">Passenger</label>
+                        <input type="number" id="passenger" name="passenger" value="4" min="1" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                    </div>
+                    <div>
+                        <label for="class" class="block text-left text-gray-700 text-sm font-bold mb-2">Class</label>
+                        <select id="class" name="class" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                            <option value="Business">Business</option>
+                            <option value="Economy">Economy</option>
+                            <option value="Luxury">Luxury</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 w-full md:w-auto">
+                    BOOK YOUR TRIP
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="animate-on-scroll">
+                <a href="#home" class="flex items-center space-x-2 text-2xl font-bold text-white mb-4">
+                    <img src="https://placehold.co/40x40/FFD700/1a1a1a?text=MC" alt="Muskan CABS Logo" class="rounded-full">
+                    <span>Muskan CABS</span>
+                </a>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Whether you're planning a business trip, a family vacation, or a one-way ride to another city, our trusted car.
+                </p>
+                <!----
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300 social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300 social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300 social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300 social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+                --->
+            </div>
+
+            <div class="animate-on-scroll delay-100">
+                <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 flex items-center footer-link"><i class="fas fa-chevron-right text-yellow-400 text-xs mr-2"></i> About Us</a></li>
+                    <li><a href="#services" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 flex items-center footer-link"><i class="fas fa-chevron-right text-yellow-400 text-xs mr-2"></i> Our Services</a></li>
+<!----                    <li><a href="#blog" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 flex items-center footer-link"><i class="fas fa-chevron-right text-yellow-400 text-xs mr-2"></i> Our Blogs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 flex items-center footer-link"><i class="fas fa-chevron-right text-yellow-400 text-xs mr-2"></i> FAQ'S</a></li> -->
+                    <li><a href="page/contact.html" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 flex items-center footer-link"><i class="fas fa-chevron-right text-yellow-400 text-xs mr-2"></i> Contact Us</a></li>
+                </ul>
+            </div>
+<!----
+            <div class="animate-on-scroll delay-200">
+                <h3 class="text-xl font-bold text-white mb-6">Recent Posts</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://placehold.co/60x60/1a1a1a/FFD700?text=Post1" alt="Recent Post 1" class="w-16 h-16 object-cover rounded-lg">
+                        <div>
+                            <p class="text-gray-500 text-sm">04 May, 25</p>
+                            <a href="#" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300 font-medium footer-link">Cupidatat Nonproident, Sunt In Culpa Qui</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <img src="https://placehold.co/60x60/1a1a1a/FFD700?text=Post2" alt="Recent Post 2" class="w-16 h-16 object-cover rounded-lg">
+                        <div>
+                            <p class="text-gray-500 text-sm">04 May, 25</p>
+                            <a href="#" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300 font-medium footer-link">Big Data. Are There Any Leftovers Kitchen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+            <div class="animate-on-scroll delay-300">
+                <h3 class="text-xl font-bold text-white mb-6">Office Address</h3>
+                <ul class="space-y-3 mb-6">
+                    <li><a href="muskancabservice.ahm@gmail.com" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 flex items-center footer-link"><i class="fas fa-envelope text-yellow-400 mr-2"></i> muskancabservice.ahm@gmail.com</a></li>
+                    <li><a href="tel:+099091 79470" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 flex items-center footer-link"><i class="fas fa-phone-alt text-yellow-400 mr-2"></i> +91 99091-79470</a></li>
+                </ul>
+                <h3 class="text-xl font-bold text-white mb-4">Newsletter</h3>
+                <form class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-2">
+                    <input type="email" placeholder="muskancabservice.ahm@gmail.com" class="flex-grow py-3 px-4 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    <button type="submit" class="bg-yellow-400 text-gray-900 py-3 px-5 rounded-lg hover:bg-yellow-500 transition-colors duration-300">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                <div class="mt-4 flex items-center">
+                    <input type="checkbox" id="privacy-policy" class="form-checkbox text-yellow-400 rounded border-gray-600 focus:ring-yellow-400 mr-2">
+                    <label for="privacy-policy" class="text-gray-400 text-sm">I agree to the <a href="#" class="text-yellow-400 hover:underline">Privacy Policy</a>.</label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm mt-12">
+            © 2017 Muskan CABS. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky navigation bar
+        const mainNav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Adjust scroll threshold as needed
+                mainNav.classList.add('shadow-lg', 'bg-white');
+            } else {
+                mainNav.classList.remove('shadow-lg', 'bg-white');
+            }
+        });
+
+        // Scroll-reveal animation
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: Unobserve after animation if it's a one-time animation
+                    // observer.unobserve(entry.target);
+                } else {
+                    // Optional: Remove 'is-visible' if you want the animation to replay on scroll out/in
+                    // entry.target.classList.remove('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: '0px 0px -50px 0px' // Adjust to trigger earlier/later
+        });
+
+        animateOnScrollElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Form submission handling (simulated email sending)
+        const taxiBookingForm = document.getElementById('taxiBookingForm');
+        taxiBookingForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form field values
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const from = document.getElementById('from').value.trim();
+            const to = document.getElementById('to').value.trim();
+            const date = document.getElementById('date').value;
+            const timeHh = document.getElementById('time-hh').value;
+            const timeMm = document.getElementById('time-mm').value;
+            const passenger = document.getElementById('passenger').value;
+            const carClass = document.getElementById('class').value;
+
+            // Validation rules
+            const alphaRegex = /^[a-zA-Z\s]+$/; // Allows alphabets and spaces
+            const numericRegex = /^\d+$/; // Allows only digits
+
+            // Perform validation
+            if (!alphaRegex.test(name)) {
+                showModal('Validation Error', 'Please enter a valid name (only alphabetical characters and spaces).', 'error');
+                return;
+            }
+
+            if (!numericRegex.test(phone) || phone.length !== 12) {
+                showModal('Validation Error', 'Please enter a valid 12-digit phone number (only numerical digits).', 'error');
+                return;
+            }
+
+            if (!alphaRegex.test(from)) {
+                showModal('Validation Error', 'Please enter a valid starting place (only alphabetical characters and spaces).', 'error');
+                return;
+            }
+
+            if (!alphaRegex.test(to)) {
+                showModal('Validation Error', 'Please enter a valid destination (only alphabetical characters and spaces).', 'error');
+                return;
+            }
+
+            // All validations passed, proceed with simulated booking
+            const formData = {
+                name: name,
+                phone: phone,
+                from: from,
+                to: to,
+                date: date,
+                time: `${timeHh}:${timeMm}`,
+                passenger: passenger,
+                class: carClass
+            };
+
+            console.log('Booking Data:', formData);
+
+            // Simulate API call for sending email
+            // In a real application, you would send this data to a backend server
+            // using fetch() or XMLHttpRequest. The backend would then handle sending the email.
+            // Example:
+            /*
+            fetch('/api/send-booking-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showModal('Booking Confirmed!', 'Your taxi booking has been successfully received. A confirmation email has been sent to you.');
+                    taxiBookingForm.reset(); // Clear the form
+                } else {
+                    showModal('Booking Failed', 'There was an issue with your booking. Please try again later.', 'error');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                showModal('Booking Failed', 'Network error or server issue. Please try again.', 'error');
+            });
+            */
+
+            // For demonstration, we'll just show a success message after a short delay
+            setTimeout(() => {
+                showModal('Booking Confirmed!', 'Your taxi booking has been successfully received. A confirmation email has been simulated to be sent to you.');
+                taxiBookingForm.reset(); // Clear the form after successful simulation
+            }, 1000); // Simulate network delay
+        });
+
+        // Modal functions
+        function showModal(title, message, type = 'success') {
+            const modal = document.getElementById('messageModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+
+            if (type === 'error') {
+                modalTitle.classList.add('text-red-600');
+                modalTitle.classList.remove('text-green-600');
+            } else {
+                modalTitle.classList.add('text-green-600');
+                modalTitle.classList.remove('text-red-600');
+            }
+
+            modal.style.display = 'flex'; // Show the modal
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('messageModal');
+            modal.style.display = 'none'; // Hide the modal
+        }
+    </script>
+</body>
+</html>

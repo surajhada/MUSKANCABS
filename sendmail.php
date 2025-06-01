@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "your-email@example.com"; // <-- Replace with your actual email
+    $to = "surajhada@gmail.com"; // <-- Replace with your actual email
     $subject = "Muskan Cabs - New Booking Request";
 
     $name = htmlspecialchars($_POST["name"]);
